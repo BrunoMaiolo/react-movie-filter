@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const movies = [
@@ -39,6 +39,14 @@ function App() {
       <option value="Romantico">Romantico</option>
       <option value="Azione">Azione</option>
     </select>
+
+      <ul>
+        {filteredMovies.map((movie, index) => (
+          <li key={index}>
+            {movie.title} - {movie.genre}
+          </li>
+        ))}
+      </ul>
   </div> 
   );
 };
