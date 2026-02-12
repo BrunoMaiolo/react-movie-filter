@@ -25,8 +25,23 @@ function App() {
   }, [selectedGenre]);
 
 
-  return <div></div>;
-}
+  return ( 
+   <div>
+        <h1>Movie Filter</h1>
+
+    <select
+      value={selectedGenre}
+      onChange={(e) => setSelectedGenre(e.target.value)}
+    >
+      <option value="">Tutti i generi</option>
+      <option value="Fantascienza">Fantascienza</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Romantico">Romantico</option>
+      <option value="Azione">Azione</option>
+    </select>
+  </div> 
+  );
+};
 
 export default App;
 
